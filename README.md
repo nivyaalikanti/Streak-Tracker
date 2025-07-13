@@ -38,7 +38,7 @@
 ## 📁 How to Run Locally
 
 ```bash
-git clone https://github.com/nivyaalikanti/streak-tracker.git
+git clone https://github.com/nivyaalikanti/Streak-Tracker.git
 cd streak-tracker
 npm install
 npm run dev
