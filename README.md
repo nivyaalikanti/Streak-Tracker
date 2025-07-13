@@ -12,7 +12,21 @@
 - 💬 Fetch motivational quotes from an API
 
 ---
+## 📸 Screenshots
 
+### 🏠 Homepage
+![Homepage](./src/assets/screenshots/homepage.png)
+
+### ➕ Create Streak
+![Create Streak](./src/assets/screenshots/create.png)
+
+### 📊 Dashboard
+![Dashboard](./src/assets/screenshots/dashboard.png)
+
+### 📅 Calendar View
+![Calendar View](./src/assets/screenshots/calendar.png)
+
+---
 ## 🛠 Tech Stack
 
 - React
