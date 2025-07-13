@@ -1,0 +1,207 @@
+/* Base setup */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f6fbff;
+}
+
+/* Main dashboard box */
+.dashboard-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fefeff;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Welcome Box */
+.welcome-box {
+  background: linear-gradient(135deg, #cad9f9, #dde9f8);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(168, 168, 168, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.welcome-box h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #004d80;
+}
+
+.quote {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  padding: 0 20px;
+}
+.quote::before,
+.quote::after {
+  content: '"';
+  font-size: 28px;
+  color: #002277;
+  font-weight: bold;
+  position: relative;
+  top: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+h1 {
+  color: #1d3557;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Button */
+.add-btn {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.add-btn:hover {
+  background-color: #005f87;
+}
+
+/* Streak name tags */
+.streak-names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.streak-name {
+  background: #eafaf1;
+  color: #004d40;
+  border: 2px solid #b2bbf2;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.streak-name:hover {
+  background: #b2c7f2;
+  color: #000;
+}
+
+/* Calendar popup */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-calendar, .modal-form {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Form */
+.modal-form h3, .modal-calendar h3 {
+  margin-bottom: 1rem;
+  color: #1d3557;
+}
+
+.modal-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-form button[type="submit"] {
+  background-color: #06b0d6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Calendar highlight */
+.marked-date {
+  background: #ffd166 !important;
+  border-radius: 50%;
+  color: black !important;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

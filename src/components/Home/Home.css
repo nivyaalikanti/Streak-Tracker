@@ -1,0 +1,262 @@
+/* Home.css */
+
+:root {
+  --primary: #004cff;
+  --secondary: #6c63ff;
+  --light-bg: #f9f9f9;
+  --dark-text: #222;
+  --muted-text: #555;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --gradient: linear-gradient(to right, #0c01dd, #aa00ffc4);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+/* HERO SECTION */
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  background: var(--gradient);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left !important;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+ 
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color:white;
+}
+
+.hero-content h1 span {
+  background: white;
+  color: var(--secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 0.4rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  margin-right: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+
+.btn-primary {
+  background-color: white;
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #e2e2ff;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+  
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 50%;
+}
+
+/* TIMELINE SECTION */
+.timeline-section {
+  padding: 4rem 8%;
+  background-color: white;
+  text-align: center;
+}
+
+.timeline-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--light-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline-item.top {
+  flex-direction: row;
+}
+
+.timeline-item.bottom {
+  flex-direction: row-reverse;
+}
+
+.timeline-icon {
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.timeline-icon.blue {
+  background-color: #007bff;
+}
+
+.timeline-icon.cyan {
+  background-color: #00bcd4;
+}
+
+.timeline-icon.indigo {
+  background-color: #3f51b5;
+}
+
+.timeline-icon.purple {
+  background-color: #9c27b0;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.timeline-content p {
+  margin-top: 0.5rem;
+  color: var(--muted-text);
+}
+
+/* FEATURES SECTION */
+.features-section {
+  padding: 4rem 8%;
+  background-color: #f0f4ff;
+  text-align: center;
+}
+
+.features-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item img {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  margin: 0.5rem 0;
+}
+
+.feature-item p {
+  color: var(--muted-text);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .hero-content {
+    text-align: center !important;
+    align-items: center !important;
+    padding-right: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-buttons a {
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .timeline-icon {
+    margin-bottom: 1rem;
+  }
+}
+
+
